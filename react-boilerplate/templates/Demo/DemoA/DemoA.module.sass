@@ -1,0 +1,175 @@
+// Main DemoA module - imports all sub-modules
+@import @/styles/helpers
+@import ./mixins
+@import ./forms
+@import ./modal
+@import ./cards
+@import ./notifications
+
+// Base layout styles
+.anchor
+    position: absolute
+    top: 50px
+
+.main
+    position: relative
+    padding: 76px 0 74px
+    background: #F7F9F9
+    +d
+        margin-bottom: 96px
+    +m
+        margin-bottom: 64px
+
+.container
+    position: relative
+    z-index: 2
+    max-width: 1112px
+    padding: 0 16px
+    +x
+        max-width: 1052px
+    +d
+        max-width: 940px
+
+.head
+    text-align: center
+    margin-bottom: 24px
+    +x
+        margin-bottom: 80px
+    +t
+        margin-bottom: 64px
+    +m
+        margin-bottom: 40px
+    .tabs
+        max-width: 100%
+        +m
+            display: none
+
+.select
+    display: none
+    +m
+        display: block
+
+.content
+    width: 100%
+    margin: 0 auto
+
+.title
+    margin-bottom: 8px
+
+.info
+    margin-bottom: 40px
+    color: $n4
+    +m
+        margin-bottom: 32px
+        font-size: 18px
+        line-height: 28px
+
+// Decorative circles
+.circle
+    position: absolute
+    border-radius: 50%
+    +t
+        display: none
+    &:nth-child(1)
+        top: 186px
+        left: calc(50% - 653px)
+        width: 360px
+        span
+            background: #B6DFEC
+    &:nth-child(2)
+        top: 603px
+        left: calc(50% - 630px)
+        width: 40px
+        span
+            background: radial-gradient(35.65% 35.65% at 14.59% 15.55%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 42.48%), radial-gradient(77.99% 77.99% at 83.49% 91.87%, #27A867 43.61%, #33E68C 100%)
+    &:nth-child(3)
+        right: calc(50% - 635px)
+        bottom: 438px
+        width: 48px
+        span
+            background: radial-gradient(35.65% 35.65% at 14.59% 15.55%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 42.48%), radial-gradient(77.99% 77.99% at 83.49% 91.87%, #FFAF13 43.61%, #FBFF47 100%)
+    &:nth-child(4)
+        right: calc(50% - 644px)
+        bottom: 90px
+        width: 260px
+        span
+            background: #D2C6F0
+    span
+        display: block
+        width: 100%
+        border-radius: 50%
+        &:before
+            content: ""
+            display: block
+            padding-bottom: 100%
+
+// Additional toast styles (specific to main component)
+.toastIcon
+    font-size: 16px
+    line-height: 1
+    flex-shrink: 0
+    margin-top: 2px
+    margin-right: 5px
+
+.toastContent
+    display: flex
+    align-items: center
+    gap: 5px
+
+.toastMessage
+    color: $n7
+    font-size: 14px
+    font-weight: 500
+    line-height: 1.4
+    flex: 1
+    word-break: break-word
+    min-width: 0
+    +m
+        font-size: 13px
+
+.toastClose
+    background: none
+    border: none
+    color: $n4
+    font-size: 16px
+    cursor: pointer
+    padding: 0
+    width: 20px
+    height: 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 4px
+    transition: all 0.2s ease
+    flex-shrink: 0
+    &:hover
+        background: rgba(255, 255, 255, 0.1)
+        color: $n7
+
+// Secret image upload styles
+.secretImageSection
+    display: flex
+    flex-direction: column
+    gap: 16px
+    width: 100%
+
+.secretImagePreview
+    display: flex
+    justify-content: center
+    padding: 16px
+    background: rgba(255, 255, 255, 0.05)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-radius: 8px
+
+.iconPlaceholder
+    height: 40px
+    display: flex
+    align-items: center
+
+// Additional styles specific to main file only
+.previewImage
+    max-width: 200px
+    max-height: 200px
+    object-fit: contain
+    border-radius: 8px
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
